@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Wait and Eat</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <!-- Navbar that stays on the top of every page. -->
+ <div ng-controller="authController" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Wait and Eat</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/login" ng-hide="currentUser">Log in</a></li>
+          <li><a href="" ng-click="logout()" ng-show="currentUser">Log Out</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <!-- Main content that changes based on route. -->
+  <div ng-view class="container"></div>
+
+
+  <!-- AngularJS  -->       
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <!-- AngularFire Library -->
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+  <!-- FirebaseSimpleLogin -->
+  <script src='https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js'></script>
+  <!-- Custom Javascript -->
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 80px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.starter-template h1{
+  font-size: 63px;
+}
+
+.partyForm{
+  margin-bottom: 20px;
+}
+
+
